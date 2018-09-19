@@ -1,0 +1,52 @@
+<section class="signup">
+    <h3 class="signup__header">Sign Up and start your wonderful shopping experience</h3>
+    <form class="signup__form" #signupForm="ngForm" (ngSubmit)="onSubmit()">
+      <h5 class="signup__form-header"> Sign Up With Email</h5>
+        <div class="signup__form-group">
+          <input class="signup__form-input" type="text" id="first_name" name="first_name" placeholder="First Name" [(ngModel)]="form.first_name" required>
+        </div>
+        <div class="signup__form-group">
+            <input class="signup__form-input" type="text" id="last_name" name="last_name" placeholder="Last Name" [(ngModel)]="form.last_name" required>
+  
+        </div>
+        <div class="signup__form-group">
+              <input class="signup__form-input" type="text" id="country" name="country" placeholder="Country" [(ngModel)]="form.country" required>
+    
+        </div>
+        <div class="signup__form-group">
+                <input class="signup__form-input" type="text" id="state" name="state" placeholder="State" [(ngModel)]="form.state" required>
+      
+        </div>
+        <div class="signup__form-group">
+            <input class="signup__form-input" type="text" id="number" name="number" placeholder="Number" [(ngModel)]="form.number" required>
+  
+        </div>
+        <div class="signup__form-group">
+            <input class="signup__form-input" type="text" id="address" name="address" placeholder="Address" [(ngModel)]="form.address" required>
+  
+        </div>
+        <div class="signup__form-group">
+            <input class="signup__form-input" type="text" id="altnumber" name="altnumber" placeholder="Alternative Number" [(ngModel)]="form.altnumber" required>
+  
+        </div>
+        <div class="signup__form-group">
+            <input class="signup__form-input" type="email" id="email" name="email" placeholder="Primary Email" [(ngModel)]="form.email" required>
+            <div class="text-errors" [hidden]="!error.email">{{ error.email }}</div>
+        </div>
+        <div class="signup__form-group">
+            <input class="signup__form-input" type="password" id="password" name="password" placeholder="Password" [(ngModel)]="form.password" required>
+            <div class="text-errors" [hidden]="!error.password">{{ error.password }}</div>
+        </div>
+        <div class="signup__form-group">
+            <input class="signup__form-input" type="password" id="password_confirmation" name="password_confirmation" placeholder="Confirm Password" [(ngModel)]="form.password_confirmation" required>
+  
+        </div>
+        <div class="signup__form-submit">
+            <input type="submit" class="btn-submit" [disabled]="!signupForm.valid">
+        </div>
+        <div class="form__signIn">
+            <a href ="/login" class="form__signIn-text">Already have an account?</a>            
+        </div>
+    </form>
+
+</section>

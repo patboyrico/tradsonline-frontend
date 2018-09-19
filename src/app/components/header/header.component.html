@@ -1,0 +1,31 @@
+<header class="header">
+  <div class="top__menu">
+        <a href="#menu" (click)="showMenu($event)"><span>Menu</span></a>
+        <div class="logo__text">tradsonline</div>
+        <div class="signup" *ngIf="!loggedIn">Sign In</div>
+        <div class="signup" *ngIf="loggedIn">&#xf007;</div>
+        <div class="basket">&#xf07a;</div>
+  </div>
+
+  <div class="navsearch">
+    <div class="navsearch__box">
+      <input class="navsearch__input" type="text" placeholder="Search Products">
+      <button class="navsearch__button"> Search </button>
+    </div>
+  </div>
+</header>
+
+
+
+<nav class="navbar" [ngClass]="{show: hideShow }">
+    <p class="close" (click)="hideMenu()"></p>
+    <ul class="navbar__listmenu">
+        <li class="navbar__listmenu-item"><a href="#">Home</a></li>
+        <li class="navbar__listmenu-item"><a href="#" (click)="showSubMenu($event)">Category</a>
+            <ul class="subnavbar__listmenu" [ngClass]="{'showSubMenu': showSub}" *ngFor="let category of categories">
+              <li class="subnavbar__listmenu-item"><a href="#">{{ category.category_name }}</a></li>
+          </ul>
+        </li>
+        <li class="navbar__listmenu-item"><a href="#">Products</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,23 @@
+<div class="product__categories">
+    <h1 class="product__categories-header">Product Categories</h1>
+    <div class="product__categories-container">
+            <div class="product__categories-container_box" *ngFor="let category of categories">
+                <img src="../../../assets/img/{{category.image_url}}">
+                <p>{{ category.category_name }}</p>
+            </div>
+    </div>
+</div>    
+
+<div class="productBy__categories">
+    <h1 class="productBy__categories-header">Product By Categories</h1>
+        <div class="productBy__categories-sub" *ngFor="let category of categoriesWithProducts">
+            <h3 class="productBy__categories-header-sub">{{ category.category_name }}</h3>
+            <div class="productBy__categories-container">
+                    <div class="productBy__categories-container_box" *ngFor="let product of category.products">
+                        <img src="../../../assets/img/education.jpg">
+                        <p>{{ product.productName }}</p>
+                        <button> Add to Cart</button>
+                    </div>
+            </div>
+        </div>
+</div>

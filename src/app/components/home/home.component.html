@@ -1,0 +1,35 @@
+<div class="image__container">
+    <img class="image" src="../../../assets/img/education.jpg">
+</div>
+<hr class="thick">
+
+<div class="info">
+    <h3 class="info__text">Own your own shop and be the life of the party!</h3>
+    <button class="info__button" (click)="signUp()">Join Now</button>
+</div>
+
+<div class="image__calltoaction">
+    <img class="image__toaction" src="../../../assets/img/education.jpg">
+    <img class="image__toaction" src="../../../assets/img/education.jpg">
+</div>
+
+<div class="signup__popup">
+    <div class="signup__popup-text">
+        Sign in and gain access to hundreds of trads made just for you! 
+    </div>
+    <button class="signup__popup-login" (click)="signIn()">Sign In</button>
+    <div class="signup__popup-signup"><a href="">Don't have an account?</a></div>
+</div>
+
+
+<div class="deal">
+    <h1 class="deal__header">Today's deal of the day!</h1>
+    <div class="deal__image">
+        <img src="../../../assets/img/education.jpg" class="deal__image-img">
+    </div>
+    <div class="deal__text"><span class="product__name">{{ discountedProduct?.name }}</span><span class="product__price">£{{ discountedProduct?.price }}</span></div>
+    <button class="deal__button">Add To Cart </button>
+</div>
+
+
+<app-products-home></app-products-home>
